@@ -1,0 +1,4 @@
+The BERT model takes a vector of tokenized text as input, and returns contextualized 768-dimensional embeddings for each token. It does this through the sequential stacking of a number of encoder layers (12 in the “base” BERT model we will be using, and 24 in a larger scale version), each one being a bi-directional version of the Transformer proposed by OpenAI which uses an attention mechanism. These layers are trained through a process known as “masking”, where a token in the input is hidden, and the network is asked to predict what that missing token is.
+
+Once we have our contextual embeddings, we can simply use a single feedforward layer to classify our sequence.
+
